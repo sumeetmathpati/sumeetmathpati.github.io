@@ -4,24 +4,24 @@ title: About
 permalink: /about
 ---
 
-# John Doe 
-Software developer, XYZ Company
+# Sumeet Mathpati 
+Student, Bacherlor of Computer engineering
 
 
-## Experiance
+<!-- ## Experiance
 
 - **Software engineer (2007 - 2010)**
 	- Computer science
 - **Web developer (2005 - 2007)**
-	- Artificial intelligence
+	- Artificial intelligence -->
 
 
 ## Education
 
 - **Bachelor's degree (2000 - 2004)**
-	- Computer science
-- **Master's degree (2005 - 2007)**
-	- Artificial intelligence
+	- Savitribai Phule Pune University
+- **Diploma in Computer science and engineering**
+	- Cusrow wadia institute of technology
 	
 
 

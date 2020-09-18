@@ -1,9 +1,13 @@
 ---
 layout: post
 title:  "Getting started with BASH"
-author: sal
 categories: [ Jekyll, tutorial ]
 image: assets/images/17.jpg
+category: [ sql ]
+author: Sumeet Mathpati
+github: "https://github.com/sumeetmathpati"
+linkedin: "https://linkedin.com/in/sumeet221b"
+twitter: https://twitter.com/
 ---
 
 Bash is one of the most used <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#What-is-a-shell_003f" target="_blank">shell</a> for many different Linux distros. <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#What-is-Bash_003f" target="_blank">Bash</a> is powerfull tool and scripting engine we can use to steamline and automate Linux tasks.
@@ -130,14 +134,14 @@ echo "Currently we are in directory: $current_dir"
 
 Most of the time we pass arguments to many of the day to day programs. Like we pass argument `-l` as argument to `ls` program to get output in lost listing format. We also can recieve arguments in our Bash script.
 
-| Variable name | Description                                   |   |   |   |
-|---------------|-----------------------------------------------|---|---|---|
-| $0            | The name of the Bash script                   |   |   |   |
-| $1 -$9        | The first 9 arguments to the Bash script      |   |   |   |
-| $#            | Number of arguments passed to the Bash script |   |   |   |
-| $@            | All arguments passed to the Bash script          |   |   |   |
-| $?            | The exit status of the most recently run process |   |   |   |
-| $$            | The process ID of the current script             |   |   |   |
+| Variable name | Description                                   |
+|---------------|-----------------------------------------------|
+| $0            | The name of the Bash script                   |
+| $1 -$9        | The first 9 arguments to the Bash script      | 
+| $#            | Number of arguments passed to the Bash script |
+| $@            | All arguments passed to the Bash script          |
+| $?            | The exit status of the most recently run process |
+| $$            | The process ID of the current script             |
 
 Let's see how we can provide arguments and use all these variables.
 ```bash
@@ -154,4 +158,3 @@ The name of the file is main.sh
 The first 9 arguments are 1 2 3 4 5    
 You have passed 5 arguments.
 ```
-***
