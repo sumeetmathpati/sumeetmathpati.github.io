@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+<body>
+
+    <main class="page-content" aria-label="Content">
+
+        <div class="wrapper">
+
+            <ul id="navbar">
+                <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
+                <li><a href="{{ site.baseurl }}/about.html">About</a></li>
+                <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
+            </ul>
+
+            {{ content }}
+        </div>
+    </main>
+
+    {% if site.goat_counter and jekyll.environment == "production" %}
+    {% include goat_counter.html %}
+    {% endif %}
+</body>
+
+</html>
