@@ -25,7 +25,7 @@ a:hover {
 }
 
 img {
-  max-width: 70ch;
+  max-width: 100%;
 }
 
 *:target { background-color: yellow; }
@@ -46,7 +46,7 @@ code {
 div.highlighter-rouge code {
   display: block;
   overflow-x: auto;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 blockquote {
@@ -104,3 +104,13 @@ border: 1px solid #ddd;
 }
 
 .wrapper > table tr:hover {background-color:#dddddd;}
+
+#author-details p {
+	font-style: italic;
+	margin: 4px;
+}
+
+#author-details h3 {
+	margin-top: 0px;
+	margin-bottom: 4px;
+}
