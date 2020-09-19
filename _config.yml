@@ -18,12 +18,15 @@ plugins:
 
 
 jekyll-archives:
-  enabled: []
-  layout: archive
+  enabled:
+    - categories
+  layout: 'page'
+  layouts:
+    year: year
+    month: month
+    tag: tag_and_category
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'
-    day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
-

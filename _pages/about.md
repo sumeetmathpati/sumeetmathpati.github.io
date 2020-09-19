@@ -21,15 +21,35 @@ Student, Bacherlor of Computer engineering
 - **Bachelor's degree (2000 - 2004)**
 	- Savitribai Phule Pune University
 - **Diploma in Computer science and engineering**
-	- Cusrow wadia institute of technology
-	
+	- Cusrow wadia institute of technolog
+
+
+## Skills
+
+- **Progrmaming languages**
+	- C
+	- Python
+	- Go
+	- BASH
+	- HTML, CSS, JS
+- **Framworks, systems and technologies**
+	- PyQt
+	- Flutter
+	- Django
+	- Arduino, ESP8266, Adafruit IO
+	- Computer networks
 
 
 ## Projects
 
-- **[Project 1](https://github.com/)**
-	- Description
-	- Description
-- **[Project 2](https://github.com/)**
-	- Description
-	- Description
+- **[Open simulator](https://github.com/sumeetmathpati/open_simulator)**
+	- Logic gates simulator
+	- Made in ElectronJS
+	- Cross platform
+- **[Tic Tac Tow multiplayer game](https://github.com/sumeetmathpati/tic-tac-toe-multiplayer)**
+	- Pythpn 
+	- **Socket Programming**
+- **[YTS Client](https://github.com/sumeetmathpati/yts_client)**
+	- YTS client mobile application.
+	- Made in **Flutter**
+	- Cross platform
