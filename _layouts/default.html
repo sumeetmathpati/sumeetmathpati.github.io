@@ -1,8 +1,7 @@
 <!DOCTYPE html>
+<html lang="{{ page.lang | default: "en" }}">
 
 {%- include head.html -%}
-
-<html lang="{{ page.lang | default: "en" }}">
 
 <body>
 
@@ -14,14 +13,12 @@
                 <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
                 <li><a href="{{ site.baseurl }}/about.html">About</a></li>
                 <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
-                <!-- <li class="dropdown">
-                    <a href="" class="dropbtn">Tutorials</a>
-                    <div class="dropdown-content">
-                        {% for category in site.categories %}
-                        <a href="{{ site.baseurl }}">{{ category[0] }}</a>
-                        {% endfor %}
-                    </div>
-                </li> -->
+                {% for category in site.categories %}
+                {% assign category_name = category[0] %}
+                <li>
+                    <a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
+                </li>
+                {% endfor %}
             </ul>
 
             {{ content }}

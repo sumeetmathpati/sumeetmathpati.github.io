@@ -6,7 +6,8 @@ layout: default
 
 <!-- Post Featured Image -->
 {% if page.image %}
-<img src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+<img src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
+	alt="{{ page.title }}">
 {% endif %}
 <!-- End Featured Image -->
 
@@ -18,22 +19,25 @@ layout: default
 
 <!-- Author details -->
 {% if page.author %}
-	<div id="author-details">
-		<p>Author</p>
-		<h3>{{ page.author }}</h3>
-		{% if page.github %}
-		| <a href="{{ page.github }}">GitHub </a>|
-		{% endif %}
+<div id="author-details">
+	<p>Author</p>
+	<h3>{{ page.author }}</h3>
+</div>
 
-		{% if page.linkedin %}
-		<a href="{{ page.linkedin }}">LinkedIn </a>|
-		{% endif %}
-
-		{% if page.linkedin %}
-		<a href="{{ page.twitter }}">Twitter </a>|
-		{% endif %}
-	</div>	
 {% endif %}
 
 <hr>
 
+<!-- Prev/Next -->
+<div>
+	{% if page.previous.url %}
+	<a href="{{ site.baseurl }}{{ page.previous.url }}"> &laquo;
+		{{ page.previous.title }}</a> <br>
+	{% endif %}
+	{% if page.next.url %}
+	<a href="{{ site.baseurl }}{{ page.next.url }}">{{page.next.title}}
+		&raquo; </a>
+	{% endif %}
+	<div class="clearfix"></div>
+</div>
+<!-- End Categories -->

@@ -3,7 +3,8 @@ layout: post
 title:  "Getting started with BASH"
 categories: [ Jekyll, tutorial ]
 image: assets/images/17.jpg
-category: [ bash ]
+categories: [  ]
+tags: [Bash, Linux]
 author: Sumeet Mathpati
 github: "https://github.com/sumeetmathpati"
 linkedin: "https://linkedin.com/in/sumeet221b"

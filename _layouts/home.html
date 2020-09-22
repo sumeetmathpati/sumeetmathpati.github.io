@@ -8,11 +8,16 @@ layout: default
   {% endif %}
 </header>
 
-{% for post in site.posts %}
+<hr>
+
+<!-- {% for post in site.posts %}
 
 <div class="post">
-  <a class="post_title" href="{{ post.url }}">{{ post.title }}</a>  <br> 
+  <a class="post_title" href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>  <br> 
   <p class="post_date">{{ post.date | date_to_long_string }}</p>
 </div>
 
-{% endfor %}
+{% endfor %} -->
+
+{{ content }}
+

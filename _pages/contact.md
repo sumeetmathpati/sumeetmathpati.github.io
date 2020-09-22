@@ -4,13 +4,14 @@ title: Contact
 permalink: /contact
 ---
 
-# Sumeet Mathpati 
-Student, Bacherlor of Computer engineering
+# John Doe
+Software engineer, XYZ
 
 
-**Email:** [sumeet.mathpati@gmail.com](mailto:sumeet.mathpati@gmail.com)
 
-<!-- **Mobile:** [+91 88887 55785](tel:+918888755784) -->
+**Email:** [email@example.com](mailto:email@example.com)
 
-**Address:** Pune, Maharashtra, India, 411048.
+**Mobile:** +01 1234567890
+
+**Address:** Example, address, 12345, STATE, COUNTRY
 
