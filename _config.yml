@@ -10,6 +10,7 @@ include: ["_pages"]
 google_analytics_id: "UA-178663162-1" # Example, UA-**********-*
 favicon: "./logo.png" # relative path to site's favicon
 goat_counter: "sumeet" # put your GoatCounter name if you want to use GoatCounter analytics
+google_ad_sense_client_id: ca-pub-2723808074010055
 
 # Build settings
 theme: minima
