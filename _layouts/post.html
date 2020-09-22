@@ -25,11 +25,21 @@ layout: default
 
 <!-- Author details -->
 {% if page.author %}
-<div id="author-details">
-	<p>Author</p>
-	<h3>{{ page.author }}</h3>
-</div>
+	<div id="author-details">
+		<p>Author</p>
+		<h3>{{ page.author }}</h3>
+		{% if page.github %}
+		| <a href="{{ page.github }}">GitHub </a>|
+		{% endif %}
 
+		{% if page.linkedin %}
+		<a href="{{ page.linkedin }}">LinkedIn </a>|
+		{% endif %}
+
+		{% if page.linkedin %}
+		<a href="{{ page.twitter }}">Twitter </a>|
+		{% endif %}
+	</div>	
 {% endif %}
 
 <hr>
@@ -57,3 +67,4 @@ layout: default
 <span class="tag-label"><a
         href="/tag/{{ tag_name | slugify }}/">{{ tag_name | replace: "-", " " }}</a></span>
 {% endfor %}
+
