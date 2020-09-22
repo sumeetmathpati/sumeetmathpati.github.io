@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
-@mixin dark-appearance {
-  filter: invert(1);
-  img {
-    filter: invert(1);
+// @mixin dark-appearance {
+//   filter: invert(1);
+//   img {
+//     filter: invert(1);
 
-    &.ioda { filter: invert(0); }
-  }
-}
+//     &.ioda { filter: invert(0); }
+//   }
+// }
 
-html[a="dark"] { @include dark-appearance; }
+// html[a="dark"] { @include dark-appearance; }
 
-@media (prefers-color-scheme: dark) {
-  html[a="auto"] { @include dark-appearance; }
-}
+// @media (prefers-color-scheme: dark) {
+//   html[a="auto"] { @include dark-appearance; }
+// }
 
 html {
   
@@ -41,13 +41,14 @@ a:hover {
 
 img {
   max-width: 100%;
+  margin-top: 2rem;
 }
 
 *:target { background-color: yellow; }
 
 .wrapper {
   max-width: 60ch;
-  margin: 4rem auto;
+  margin: 0rem auto;
   padding: 0 1rem;
 }
 
@@ -121,13 +122,13 @@ blockquote {
   margin-top: 1rem;
 }
 
-.category-label {
+.tag-label {
   font-size: 14px;
   padding: 5px;
   border: 1px solid black;
 }
 
-.category-label a {
+.tag-label a {
   font-style: italic;
   color: black;
 }

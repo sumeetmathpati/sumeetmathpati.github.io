@@ -4,12 +4,18 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
+{% for tag in page.tags %}
+<span class="tag-label"><a href="/tag/{{ tag | slugify }}/">{{ tag | replace: "-", " " }}</a></span>
+{% endfor %}
+
 <!-- Post Featured Image -->
 {% if page.image %}
 <img src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
 	alt="{{ page.title }}">
 {% endif %}
 <!-- End Featured Image -->
+
+
 
 <hr>
 
@@ -41,3 +47,13 @@ layout: default
 	<div class="clearfix"></div>
 </div>
 <!-- End Categories -->
+
+<hr>
+
+<p style="font-style: italic;">Explore:</p>
+
+{% for tag in site.tags %}
+{% assign tag_name = tag[0] %}
+<span class="tag-label"><a
+        href="/tag/{{ tag_name | slugify }}/">{{ tag_name | replace: "-", " " }}</a></span>
+{% endfor %}
