@@ -7,6 +7,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sumeetmathpati
 permalink: /:title/
 include: ["_pages"]
+google_analytics_id: UA-178682940-1 # Example, UA-**********-*
 
 # Build settings
 theme: minima
