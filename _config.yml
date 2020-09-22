@@ -18,6 +18,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate
+  - jekyll-sitemap
 
 
 # Pagination 
