@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  "C pointers"
-categories: [ C ]
 image: assets/images/17.jpg
-categories: [  ]
-tags: [C, programming]
+tags: [ C, programming ]
 author: Sumeet Mathpati
 github: "https://github.com/sumeetmathpati"
 linkedin: "https://linkedin.com/in/sumeet221b"

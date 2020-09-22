@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Getting started with BASH"
+title:  "Computer networks"
 image: assets/images/17.jpg
 tags: [Bash, Linux]
-categories: ["1", "2", "3"]
 author: Sumeet Mathpati
 github: "https://github.com/sumeetmathpati"
 linkedin: "https://linkedin.com/in/sumeet221b"
 twitter: https://twitter.com/
+hidden: true
 ---
 
 Bash is one of the most used <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#What-is-a-shell_003f" target="_blank">shell</a> for many different Linux distros. <a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#What-is-Bash_003f" target="_blank">Bash</a> is powerfull tool and scripting engine we can use to steamline and automate Linux tasks.

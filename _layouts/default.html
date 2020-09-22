@@ -11,14 +11,18 @@
 
             <ul id="navbar">
                 <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        {% for category in site.categories %}
+                        {% assign category_name = category[0] %}
+                        <a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
                 <li><a href="{{ site.baseurl }}/about.html">About</a></li>
                 <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
-                {% for category in site.categories %}
-                {% assign category_name = category[0] %}
-                <li>
-                    <a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
-                </li>
-                {% endfor %}
+
             </ul>
 
             {{ content }}
