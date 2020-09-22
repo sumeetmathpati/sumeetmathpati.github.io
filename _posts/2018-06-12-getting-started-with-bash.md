@@ -3,7 +3,6 @@ layout: post
 title:  "Getting started with BASH"
 image: assets/images/17.jpg
 tags: [Bash, Linux]
-categories: ["1", "2", "3"]
 author: Sumeet Mathpati
 github: "https://github.com/sumeetmathpati"
 linkedin: "https://linkedin.com/in/sumeet221b"
