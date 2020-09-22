@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+@mixin dark-appearance {
+  filter: invert(1);
+  img {
+    filter: invert(1);
+
+    &.ioda { filter: invert(0); }
+  }
+}
+
+html[a="dark"] { @include dark-appearance; }
+
+@media (prefers-color-scheme: dark) {
+  html[a="auto"] { @include dark-appearance; }
+}
+
 html {
   
   color: #000000;

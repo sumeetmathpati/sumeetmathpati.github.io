@@ -3,7 +3,7 @@ email: sumeet.mathpati@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A simple and minimal jekyll theme.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sumeetmathpati.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sumeetmathpati
 permalink: /:title/
 include: ["_pages"]
