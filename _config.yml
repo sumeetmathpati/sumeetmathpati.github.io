@@ -16,22 +16,10 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
 
 
 # Pagination 
-paginate: 6
+paginate: 10
 paginate_path: /page:num/
-
-jekyll-archives:
-  enabled:
-    all
-  layout: 'archive'
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
