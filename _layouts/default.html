@@ -10,26 +10,16 @@
         <div class="wrapper">
 
             <ul id="navbar">
-                <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
-                <!-- <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Tutorials</a>
-                    <div class="dropdown-content">
-                        {% for category in site.categories %}
-                        {% assign category_name = category[0] %}
-                        <a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
-                        {% endfor %}
-                    </div>
-                </li> -->
-                <li><a href="{{ site.baseurl }}/about.html">About</a></li>
-                <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
-
+                <li class="navbar-item" id="site-name"><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></li>
+                <li class="navbar-item"><a href="{{ site.baseurl }}/about.html">About</a></li>
+                <li class="navbar-item"><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
             </ul>
 
             {{ content }}
 
-            <hr>
+            <p>&copy; 2020 {{ site.title }}</p>
 
-            <p>&copy; 2020 Sumeet Mathpati</p>
+            <hr>
 
         </div>
     </main>

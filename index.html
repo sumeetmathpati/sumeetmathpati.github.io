@@ -5,9 +5,8 @@ layout: home
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 <div class="post">
-
-  <a class="post_title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <br>
-  <!-- <p class="post_date">{{ post.date | date_to_long_string }}</p> -->
+  <p class="post-date">{{ post.date | date_to_long_string }}</p>
+  <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <br>
 
 </div>
 {% endfor %}
@@ -21,19 +20,16 @@ layout: home
     Previous
   </a>
   {% else %}
-  <span class="previous"></span>
   {% endif %}
+
   <span style="text-align: center;" class="page_number ">
     Page: {{ paginator.page }} of {{ paginator.total_pages }}
   </span>
+
   {% if paginator.next_page %}
   <a style="text-align: right;" href="{{ paginator.next_page_path }}" class="next">Next</a>
   {% else %}
-  <span class="next "></span>
   {% endif %}
 </div>
 
-<!-- {% for category in site.categories %}
-{% assign category_name = category[0] %}
-  <span class="category-label"><a href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a></span>
-{% endfor %} -->
+<hr>
