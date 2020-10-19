@@ -3,26 +3,23 @@
 
 {%- include head.html -%}
 
-<body>
+<body class="w3-container">
 
-    <main class="page-content" aria-label="Content">
+    <div id="header" class="w3-content w3-margin-top">
+        {% if page.name == "index.html" %}
+        <img class="" src="{{ site.baseurl }}{{ site.avatar }}" alt="" style="border-radius: 50%; width: 100px;">   
+        {% else %}
+        <a href="{{ site.baseurl }}/"><img id="header-image" class="" src="{{ site.baseurl }}{{ site.avatar }}" alt="" style="border-radius: 50%; width: 80px;"></a>
+        {% endif %}
+    </div>
 
-        <div class="wrapper">
+    <div id="page-content" class="w3-content">
 
-            <ul id="navbar">
-                <li class="navbar-item" id="site-name"><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></li>
-                <li class="navbar-item"><a href="{{ site.baseurl }}/about.html">About</a></li>
-                <li class="navbar-item"><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
-            </ul>
+        {{ content }}
 
-            {{ content }}
+        {% include footer.html %}
 
-            <p>&copy; 2020 {{ site.title }}</p>
-
-            <hr>
-
-        </div>
-    </main>
+    </div>
 
     {% if site.goat_counter and jekyll.environment == "production" %}
     {% include goat_counter.html %}

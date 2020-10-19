@@ -1,0 +1,145 @@
+body {
+    font-family:"Ubuntu";
+    color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:"Ubuntu";
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+p, a, ul {
+    font-size: 20px;
+}
+
+a {
+    color: #069;
+}
+
+img {
+    width: 100%;
+}
+
+blockquote {
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+    font-style: italic;
+    border-left: 5px solid  rgb(212, 212, 212);
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+ul li{
+    padding:8px 8px;
+    
+}
+
+code {
+    padding: 4px;
+    font-family: "Fira Code";
+}
+
+p code, ul code, li code, ol code {
+    color: #e83e8c;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;width:100%;
+    display:table;
+    border-top: 1px solid #ddd;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+tr{
+    border-bottom:1px solid #ddd
+} tbody tr:nth-child(even){background-color:#f1f1f1}
+
+td, th{
+    padding:8px 8px;
+    display:table-cell;
+    text-align:left;
+    vertical-align:top
+}
+th:first-child{padding-left:16px;}
+
+
+#header, #page-content {
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+#header-image:hover {
+    border: 5px solid lightgrey;
+}
+
+#owner_name {
+    
+    font-weight: 600;
+    font-size: 56px;
+}
+
+#post-list {
+    list-style-type:none;
+    padding:0;
+    margin:0
+}
+
+#post-list li {
+    margin-bottom: 32px;
+}
+
+.post-date{
+    opacity: 75%;
+    font-size: 16px;
+}
+
+#post-list a {
+    text-decoration: none;
+}
+
+#post-list a:hover {
+    background-color: #069;
+    color: white;
+}
+
+#post-list li {
+    padding: 0 0 0 0;
+    border: none;
+}
+
+.highlight {
+    padding: 4px;   
+}
+
+pre.highlight {
+    overflow-x: auto;
+}
+
+.toc {
+    margin-top: 16px;
+    background-color: rgb(240, 240, 240);
+    padding: 8px;
+}
+
+.toc ul li{
+    border-bottom: none;
+    padding: 0;
+}
+
+.toc a{
+    text-decoration: none;
+}
+
+#social-icons i{
+    font-size: 24px;
+    margin: 4px;
+}
+

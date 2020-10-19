@@ -2,34 +2,70 @@
 layout: home
 ---
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-<div class="post">
-  <p class="post-date">{{ post.date | date_to_long_string }}</p>
-  <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <br>
-
-</div>
-{% endfor %}
-
-<hr>
-
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path }}" class="previous">
-    Previous
-  </a>
-  {% else %}
+<h1 id="owner_name">Hi, I'm {{ site.first_name }}</h1>
+<div id="social-icons">
+  {% if site.github %}
+  <a href="{{ site.github }}" target="_blank"><i class="fab fa-github" style="color: #24292e;"></i></a>
   {% endif %}
-
-  <span style="text-align: center;" class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-
-  {% if paginator.next_page %}
-  <a style="text-align: right;" href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
+  {% if site.linkedin %}
+  <a href="{{ site.linkedin }}" target="_blank"><i class="fab fa-linkedin" style="color: #2867b2;"></i></a>
+  {% endif %}
+  {% if site.facebook %}
+  <a href="{{ site.facebook }}" target="_blank"><i class="fab fa-facebook" style="color: #4267B2;"></i></a>
+  {% endif %}
+  {% if site.instagram %}
+  <a href="{{ site.instagram }}" target="_blank"><i class="fab fa-instagram" style="color: #E1306C;"></i></a>
+  {% endif %}
+  {% if site.twitter %}
+  <a href="{{ site.twitter }}" target="_blank"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
   {% endif %}
 </div>
 
-<hr>
+<p id="about">{{ site.about }}</p>
+
+{% if site.quote %}
+<div class="w3-panel w3-light-grey">
+  <span style="font-size:150px;line-height:0.6em;opacity:0.2">❝</span>
+  <p class="w3-large" style="margin-top:-40px"><i>{{ site.quote }}</i><br><strong
+      class="w3-margin-top">{{ site.quote_author }}</strong></p>
+</div>
+{% endif %}
+
+<h2 style="font-weight: bold;">Recommanded</h2>
+<ul id="post-list" class="">
+  {% for post in site.posts %}
+  {% if post.recommanded %}
+  <li>
+    <div class="w3-row">
+      <div class="w3-col l9">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+      <div class="w3-col l3 post-date">
+        <span>{{ post.date | date: "%B %d, %Y"}}</span>
+      </div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+<h2 style="font-weight: bold;">Blog posts</h2>
+
+<ul id="post-list" class="">
+  {% for post in site.posts %}
+  {% if post.recommanded %}
+  {% continue %}
+  {% endif %}
+  <li>
+    <div class="w3-row">
+      <div class="w3-col l9">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </div>
+      <div class="w3-col l3 post-date">
+        <span>{{ post.date | date: "%B %d, %Y"}}</span>
+      </div>
+    </div>
+  </li>
+
+  {% endfor %}
+</ul>

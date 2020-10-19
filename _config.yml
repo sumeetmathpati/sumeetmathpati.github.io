@@ -1,25 +1,47 @@
-title: Sumeet's blog
+title: Sumeet's Blog
 email: sumeet.mathpati@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A simple and minimal jekyll theme.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sumeetmathpati.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  sumeetmathpati
+
+# Personal information
+first_name: Sumeet
+last_name: Mathpati
+avatar: "https://avatars1.githubusercontent.com/u/25920438?s=400&v=4"
+about: "I am a software engineering student. I am computer science and engineering undergrad. I love to FOSS. When I am not using computer I like to watch movies, TV shows, read books."
+
+# Social media links
+github: "https://github.com/sumeetmathpati"
+linkedin: "https://www.linkedin.com/sumeet221b"
+# twitter: "https://twitter.com/"
+# facebook: "https://www.facebook.com/"
+# instagram: "https://www.instagram.com/"
+
+# Quote to show on site
+# quote: "Proprietary software is an injustice."
+# quote_author: "Richard Stallman"
+
 permalink: /:title/
 include: ["_pages"]
 favicon: "./logo.png" # relative path to site's favicon
-goat_counter: "sumeet" # put your GoatCounter name if you want to use GoatCounter analytics
-google_ad_sense_client_id: ca-pub-2723808074010055
+goat_counter: "" # put your GoatCounter name if you want to use GoatCounter analytics
+
+# Pagination 
+# paginate: 9
+# paginate_path: /page:num/
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-toc
+  - jekyll-paginate
 
+markdown: kramdown
 
-# Pagination 
-paginate: 10
-paginate_path: /page:num/
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
