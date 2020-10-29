@@ -32,6 +32,7 @@ layout: home
 {% endif %}
 
 <div>
+  {% if site.tags.size > 0 %}
   <h2 style="font-weight: bold;">Tags</h2>
 
   {% assign tag_list = site.tags %}
@@ -55,35 +56,18 @@ layout: home
   {% endfor %}
   {% endif %}
   {% assign tag_list = nil %}
+  <hr>
+
+  {% endif %}
+
+
 </div>
 
-<hr>
-
-<h2 style="font-weight: bold;">Recommanded</h2>
-<ul id="post-list" class="">
-  {% for post in site.posts %}
-  {% if post.recommanded %}
-  <li>
-    <div class="w3-row">
-      <div class="w3-col l9">
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </div>
-      <div class="w3-col l3 post-date">
-        <span>{{ post.date | date: "%B %d, %Y"}}</span>
-      </div>
-    </div>
-  </li>
-  {% endif %}
-  {% endfor %}
-</ul>
-
+{% if site.posts.size > 0 %}
 <h2 style="font-weight: bold;">Blog posts</h2>
 
 <ul id="post-list" class="">
   {% for post in site.posts %}
-  {% if post.recommanded %}
-  {% continue %}
-  {% endif %}
   <li>
     <div class="w3-row">
       <div class="w3-col l9">
@@ -97,3 +81,4 @@ layout: home
 
   {% endfor %}
 </ul>
+{% endif %}

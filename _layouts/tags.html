@@ -4,9 +4,6 @@ layout: default
 permalink: "/tags.html"
 ---
 
-
-
-
 <div>
 
     <div>
@@ -42,9 +39,6 @@ permalink: "/tags.html"
     {% assign pages_list = tag[1] %}
     <ul id="post-list" class="">
         {% for post in pages_list %}
-        {% if post.recommanded %}
-        {% continue %}
-        {% endif %}
         <li>
             <a href="" name="{{ tag[0] }}"></a>
             <div class="w3-row">
