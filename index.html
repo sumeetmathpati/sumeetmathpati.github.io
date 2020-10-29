@@ -31,6 +31,34 @@ layout: home
 </div>
 {% endif %}
 
+<div>
+  <h2 style="font-weight: bold;">Tags</h2>
+
+  {% assign tag_list = site.tags %}
+  {% if tag_list.first[0] == null %}
+  {% for tag in tag_list %}
+
+  <a href="{{site.baseurl}}/tags#{{ category | url_escape | strip | replace: ' ', '-' }}"
+    class="w3-button w3-light-gray w3-margin-right w3-medium">{{ tag | camelcase }}
+    <span class="w3-badge w3-margin-left w3-light-gray">{{ site.tags[tag].size }}</span>
+  </a>
+
+  {% endfor %}
+  {% else %}
+  {% for tag in tag_list %}
+
+  <a href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}"
+    class="w3-button w3-light-gray w3-margin-right w3-medium">{{ tag[0] | camelcase }}
+    <span class="w3-badge w3-margin-left w3-light-gray">{{ tag[1].size }}</span>
+  </a>
+
+  {% endfor %}
+  {% endif %}
+  {% assign tag_list = nil %}
+</div>
+
+<hr>
+
 <h2 style="font-weight: bold;">Recommanded</h2>
 <ul id="post-list" class="">
   {% for post in site.posts %}
