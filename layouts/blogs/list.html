@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumeet's Page</title>
+
+    {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{- end }}
+
+
+</head>
+
+<body>
+
+    {{ partial "navbar.html" . }}
+    
+    <h1>blogs</h1>
+
+    {{ range .Pages }}
+    <a href="{{ .RelPermalink }}"><p>> {{.Title}}</p></a>
+    {{ end }}
+
+
+</body>
+
+</html>

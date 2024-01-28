@@ -1,0 +1,52 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1.2rem;
+    max-width: 900px;
+    font-weight: bold;
+}
+
+.cmd {
+    color: #aaa;
+}
+
+.small {
+    font-size: 1rem;
+}
+
+.mute {
+    color: #aaa;
+}
+
+
+a {
+    color: #78bcff;
+    text-decoration: none;
+}
+a:visited {
+    color: #78bcff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #78bcff;
+    text-align: center;
+    margin-right: 16px;
+    text-decoration: none;
+  }
+
+#navbar {
+    margin-bottom: 64px;
+}
