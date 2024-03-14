@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golang Notes</title>
+
+    <link rel="stylesheet" href="https://sumeetmathpati.github.io/css/style.css">
+
+    
+</head>
+
+<body>
+
+
+    
+
+    <div id="navbar">
+    <p style="font-weight: bold;">Sumeet Mathpati</p>
+    
+</div>
+
+
+    <h1>Golang Notes</h1>
+    <p>27 Jan 2024</p>
+    <hr style="margin-bottom: 64px;">
+
+    <p>This is collection of notes I&rsquo;ve taken while learning Golang.</p>
+<h2 id="loops">Loops</h2>
+<p>Go only has keyword for looping, and that&rsquo;s <code>for</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> &lt;<span style="color:#a6e22e">initial</span> <span style="color:#a6e22e">statement</span>&gt;; &lt;<span style="color:#a6e22e">condition</span>&gt;; &lt;<span style="color:#a6e22e">post</span> <span style="color:#a6e22e">statement</span>&gt; {
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#a6e22e">statements</span>&gt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>initial statement</code>, executed once, optional.</li>
+<li><code>condition</code>, executed before each loop, optional.</li>
+<li><code>post statement</code>, executed after each loop, optional.</li>
+</ul>
+<p>Another form of loop is with <code>range</code>. Syntax for that is,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Loop with range
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> &lt;<span style="color:#a6e22e">key</span>&gt;, &lt;<span style="color:#a6e22e">value</span>&gt; <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> &lt;<span style="color:#66d9ef">map</span>&gt; {
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#a6e22e">statements</span>&gt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>We can use arrays, and slices here as well. Due to <code>range</code> keyword, the for loop iterates through all the elements in array, slice or map.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Loop with range example
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">myMap</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Sumeet&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;age&#34;</span>:  <span style="color:#e6db74">&#34;100&#34;</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">myMap</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%s: %s\n&#34;</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="primary-types">Primary Types</h2>
+<h3 id="bool">Bool</h3>
+<p>A <code>bool</code> type can only have value <code>true</code> or <code>false</code>.</p>
+<h3 id="numbers">Numbers</h3>
+<p>In Go, we can have two types of numbers integers (whole numbers), and floating points.</p>
+<p>The zero-value, or default value for number types is <code>0</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uint8</td>
+<td>Unsigned integer, 8-bits, 0-255</td>
+</tr>
+<tr>
+<td>uint16</td>
+<td>Unsigned integer, 16-bits, 0-65535</td>
+</tr>
+<tr>
+<td>uint32</td>
+<td>Unsigned integer, 32-bits, 0-4294967295</td>
+</tr>
+<tr>
+<td>uint64</td>
+<td>Unsigned integer, 64-bits, 0-18446744073709551615</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>Signed integer, 64-bits, -128-127</td>
+</tr>
+<tr>
+<td>int16</td>
+<td>Signed integer, 16-bits, -32768 to 32767</td>
+</tr>
+<tr>
+<td>int32</td>
+<td>Signed integer, 32-bits, -2147483648 to 2147483647</td>
+</tr>
+<tr>
+<td>int64</td>
+<td>Signed integer, -9223372036854775808 to 9223372036854775807</td>
+</tr>
+<tr>
+<td>uint</td>
+<td>Signed integer, 32 or 64 bits</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Signed integer, 32 or 64 bits</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Alias for uint8</td>
+</tr>
+<tr>
+<td>rune</td>
+<td>Alias for int32</td>
+</tr>
+</tbody>
+</table>
+<p>We cnnot assign value larger thatn the capacity</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myint</span> <span style="color:#66d9ef">int8</span> = <span style="color:#ae81ff">128</span> <span style="color:#75715e">// cannot use 128 (untyped int constant) as int8 value in variable declaration (overflows)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myint</span> <span style="color:#66d9ef">int8</span> = <span style="color:#ae81ff">128</span> <span style="color:#75715e">// cannot use 128 (untyped int constant) as int8 value in variable declaration (overflows)
+</span></span></span></code></pre></div><p>If we add a number fo the variable which is already at its highest value, it will wraparound.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myint</span> <span style="color:#66d9ef">uint8</span> = <span style="color:#ae81ff">255</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">myint</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#75715e">// 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="string">String</h3>
+<p>Go has <code>string</code> type fo represent string.</p>
+<p>There are two types of string literals</p>
+<ul>
+<li>Raw strings, enclosed in  <code>` </code> (backtick)
+<ul>
+<li>Variable will have whatever we see on screen. I.e., if we write <code>\n</code> in raw string, it will be printed as it is.</li>
+</ul>
+</li>
+<li>Interpreted, enclosed in <code>&quot;</code> (double quotes).
+<ul>
+<li>Go might transform the string, i.e. if we write <code>\n</code> in interpreted string, it will be printed as newline, and not <code>\n</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="rune">Rune</h3>
+<p>Rune is an alias for <code>int32</code>. A <code>string</code> type of a collection of runes, where rune represent a character in a string.</p>
+<h3 id="nil-value"><code>nil</code> Value</h3>
+<p><code>nil</code> is a special value in Go.</p>
+<h2 id="composite-types">Composite Types</h2>
+<p>Composite types are composed of Go&rsquo;s fundamental types.</p>
+<h3 id="array">Array</h3>
+<p>Array is a fixed sized list of a fixed type.</p>
+<p>Syntax is <code>[&lt;size&gt;]&lt;type&gt;</code>, for example <code>[3]int</code> represents array of size 3 of type int.</p>
+
+
+</body>
+
+</html>

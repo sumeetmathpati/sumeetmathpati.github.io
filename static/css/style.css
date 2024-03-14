@@ -50,3 +50,46 @@ ul {
 #navbar {
     margin-bottom: 64px;
 }
+
+/* Code */
+
+
+pre {
+    padding: 16px;
+}
+
+p > code, li > code {
+    color: #78bcff;
+    border: 1px solid #78bcff;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+pre code {
+    white-space: pre;
+}
+/* List */
+
+ul, ol {
+    list-style-type: circle; 
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* Table */
+
+table, td, th {
+    padding: 4px;
+    border: 1px solid #78bcff;
+}
+
+table {
+    border-collapse: collapse;
+}

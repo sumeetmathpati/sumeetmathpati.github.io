@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 27 Jan 2024 19:33:12 +0000</lastBuildDate>
     <atom:link href="https://sumeetmathpati.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The one ring, to rule them all!</title>
-      <link>https://sumeetmathpati.github.io/blogs/first/</link>
+      <title>Golang Notes</title>
+      <link>https://sumeetmathpati.github.io/blogs/golang-notes/</link>
       <pubDate>Sat, 27 Jan 2024 19:33:12 +0000</pubDate>
-      <guid>https://sumeetmathpati.github.io/blogs/first/</guid>
-      <description>The one ring, to rule them all!&#xA;Hello world 1 2 3 package main; package main; package main; </description>
+      <guid>https://sumeetmathpati.github.io/blogs/golang-notes/</guid>
+      <description>This is collection of notes I&amp;rsquo;ve taken while learning Golang.&#xA;Loops Go only has keyword for looping, and that&amp;rsquo;s for.&#xA;for &amp;lt;initial statement&amp;gt;; &amp;lt;condition&amp;gt;; &amp;lt;post statement&amp;gt; { &amp;lt;statements&amp;gt; } initial statement, executed once, optional. condition, executed before each loop, optional. post statement, executed after each loop, optional. Another form of loop is with range. Syntax for that is,&#xA;// Loop with range for &amp;lt;key&amp;gt;, &amp;lt;value&amp;gt; := range &amp;lt;map&amp;gt; { &amp;lt;statements&amp;gt; } We can use arrays, and slices here as well.</description>
     </item>
   </channel>
 </rss>

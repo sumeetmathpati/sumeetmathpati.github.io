@@ -19,7 +19,7 @@
     
     <h1>blogs</h1>
 
-    {{ range .Pages }}
+    {{ range .Pages.Reverse }}
     <a href="{{ .RelPermalink }}"><p>> {{.Title}}</p></a>
     {{ end }}
 
